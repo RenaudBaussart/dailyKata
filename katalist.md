@@ -12,10 +12,24 @@ export function friend(friends: string[]): string[] {
 }
 ```
 
-**T**
+**Beginner Series #3 Sum of Numbers**
 
 ```TypeScript
-
+export function getSum(a: number, b: number): number {
+  if (a == b) {
+    return a;
+  }
+  if (b > a) {
+    let c: number = a;
+    a = b;
+    b = c;
+  }
+  let output: number = b;
+  for (let i = b + 1; i <= a; i++) {
+    output += i;
+  }
+  return output;
+}
 ```
 
 **T**
