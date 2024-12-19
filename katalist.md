@@ -51,10 +51,18 @@ export function findNextSquare(sq: number): number {
 
 ```
 
-**T**
+**Printer error**
 
 ```TypeScript
-
+export function printerError(s: string): string {
+  let errorNumber:number = 0;
+  for(let i = 0; i < s.length ; i++){
+    if(s.charCodeAt(i) > 109 ){
+      errorNumber ++;
+    }
+  }
+  return '' + errorNumber + '/' + s.length;
+}
 ```
 
 **T**
