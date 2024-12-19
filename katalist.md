@@ -32,9 +32,22 @@ export function getSum(a: number, b: number): number {
 }
 ```
 
-**T**
+**Find the next perfect square!**
 
 ```TypeScript
+export function findNextSquare(sq: number): number {
+  if (Math.floor(Math.sqrt(sq)) !== Math.sqrt(sq)) {
+    return -1;
+  }
+  
+  let nextNum = sq + 1;
+  while (true) {
+    if (Math.floor(Math.sqrt(nextNum)) === Math.sqrt(nextNum)) {
+      return nextNum;
+    }
+    nextNum++;
+  }
+}
 
 ```
 
